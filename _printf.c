@@ -2,6 +2,12 @@
 #include <stdio.h>
 #include <string.h>
 #include "main.h"
+/**
+ * _printf - function that print anything
+ *@format: format pointer
+ * by wafa & taha
+ * Return: count
+ */
 
 int _printf(const char *format, ...)
 {
