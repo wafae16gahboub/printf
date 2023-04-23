@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * putswt: function writes the string at s, followed by a newline
+ * putswt - function writes the string at s, followed by a newline
  * @s: pointer
  * Return: 0
  */
