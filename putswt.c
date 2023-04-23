@@ -5,7 +5,7 @@
  * @s: pointer
  * Return: 0
  */
-int putswt(const char *s)
+int putswt(const char *s, ...)
 {
 	while (*s)
 	{

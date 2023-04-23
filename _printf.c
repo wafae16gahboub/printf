@@ -32,7 +32,7 @@ int _printf(const char *format, ...)
 			{
 				char *s = va_arg(args, char *);
 
-				fputs(s, stdout);
+				putswt(s, stdout);
 				count += strlen(s);
 			}
 			else if (*format == '%')
@@ -43,7 +43,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			putchar(*format);
+			putcharwt(*format);
 			count++;
 		}
 		format++;
