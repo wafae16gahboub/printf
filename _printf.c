@@ -8,7 +8,6 @@
  * by wafa & taha
  * Return: count
  */
-
 int _printf(const char *format, ...)
 {
 	unsigned int count = 0;
@@ -33,9 +32,7 @@ int _printf(const char *format, ...)
 
 				while (*s)
 				{
-					putcharwt(*s);
-					s++;
-					count++;
+					putcharwt(*s), s++, count++;
 				}
 			}
 			else if (*format == '%')
