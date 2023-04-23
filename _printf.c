@@ -15,8 +15,7 @@ int _printf(const char *format, ...)
 	va_list args;
 
 	va_start(args, format);
-	/*unsigned int count = 0;*/
-	while (*format != '\0')
+	while (*format)
 	{
 		if (*format == '%')
 		{
@@ -30,10 +29,14 @@ int _printf(const char *format, ...)
 			}
 			else if (*format == 's')
 			{
-				char *s = va_arg(args, char *);
+				char *s = va_arg(args, char*);
 
-				putswt(s, stdout);
-				count += strlen(s);
+				while (*s)
+				{
+					putcharwt(*s);
+					s++;
+					count++;
+				}
 			}
 			else if (*format == '%')
 			{
