@@ -45,7 +45,9 @@ count++;
 else
 {
 putcharwt(*format);
-count++;
+format++;
+putcharwt(*format);
+count+=2;
 }
 format++;
 }
