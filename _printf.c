@@ -41,14 +41,17 @@ else if (*format == '%')
 putcharwt('%');
 count++;
 }
+else
+{
+putcharwt('%');
+putcharwt(*format);
+count =+ 2;
+}
 }
 else
 {
 putcharwt(*format);
-format++;
-putcharwt(*format);
-count+=2;
-break;
+count++;
 }
 format++;
 }
