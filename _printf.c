@@ -48,6 +48,7 @@ putcharwt(*format);
 format++;
 putcharwt(*format);
 count+=2;
+break;
 }
 format++;
 }
