@@ -11,3 +11,23 @@ int putcharwt(char c)
 {
 	return (write(1, &c, 1));
 }
+
+/**
+ * putswt - write string
+ *@arg : strintg
+ *Return: linght zero
+ */
+int putswt(char *arg)
+{
+int cnt = 0;
+if (arg == NULL)
+{
+return (-1);
+}
+while (*arg)
+{
+cnt += putcharwt(*arg);
+arg++;
+}
+return (cnt);
+}

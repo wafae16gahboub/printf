@@ -24,28 +24,21 @@ if (*format == '%')
 format++;
 if (*format == 'c')
 {
-char c = va_arg(args, int);
-putcharwt(c);
-count++;
+count += putcharwt(va_arg(args, int));
 }
 else if (*format == 's')
 {
-char *s = va_arg(args, char*);
-while (*s)
-{
-putcharwt(*s), s++, count++;
-}
+count += putswt(va_arg(args, char*));
 }
 else if (*format == '%')
 {
-putcharwt('%');
-count++;
+count += putcharwt('%');
 }
 else
 {
 putcharwt('%');
 putcharwt(*format);
-count =+ 2;
+count = +2;
 }
 }
 else
