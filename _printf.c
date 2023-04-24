@@ -23,17 +23,17 @@ if (*format == '%')
 {
 format++;
 if (*format == 'c')
-{
 count += putcharwt(va_arg(args, int));
-}
 else if (*format == 's')
 {
-count += putswt(va_arg(args, char*));
+char *s = va_arg(args, char*);
+if (s == NULL)
+count += putswt("(null)");
+else
+count += putswt(s);
 }
 else if (*format == '%')
-{
 count += putcharwt('%');
-}
 else
 {
 putcharwt('%');
@@ -42,10 +42,7 @@ count = +2;
 }
 }
 else
-{
-putcharwt(*format);
-count++;
-}
+count += putcharwt(*format);
 format++;
 }
 va_end(args);
